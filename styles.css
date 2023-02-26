@@ -1,0 +1,284 @@
+:root {
+  --primary-color: #00b4ee;
+  --back-dark-color: #231d19;
+  --back-light-color: #fff;
+  --text-dark-color: #4f4844;
+  --text-gray-color: #b3b3b3;
+  --text-light-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  color: var(--text-light-color);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  background: var(--back-dark-color);
+}
+
+.content {
+  padding: 0 2%;
+  height: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+nav {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 16px 2%;
+  height: 80px;
+  background: var(--back-dark-color);
+}
+
+.nav-content {
+  margin: 0 auto;
+  max-width: 1366px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-content img {
+  height: 48px;
+  transition: 0.3s;
+}
+
+.nav-content img:hover {
+  transform: scale(1.1);
+}
+
+.nav-content ul {
+  display: flex;
+}
+
+.nav-content ul li {
+  margin: 8px;
+  list-style: none;
+  position: relative;
+}
+
+.nav-content ul li::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 0;
+  height: 4px;
+  background: var(--primary-color);
+  transition: 0.3s;
+}
+
+.nav-content ul li:hover::after {
+  width: 100%;
+}
+
+.nav-content ul li a {
+  font-size: 1rem;
+  color: var(--text-gray-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-content ul li a:hover {
+  color: var(--text-light-color);
+}
+
+.main-container {
+  padding: 24px;
+  height: 100%;
+  max-height: 768px;
+}
+
+.main-content {
+  display: grid;
+  place-items: center;
+}
+
+.main-content h1 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.main-content h1 strong {
+  color: var(--primary-color);
+}
+
+.banner-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-container-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 360px;
+  min-width: 360px;
+  flex: 1;
+}
+
+.banner-container-img-mask {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: rgba(35, 29, 25, 0.8);
+}
+
+.banner-container-img-mask p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.banner-container-description {
+  flex: 3;
+  padding: 56px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #00b4ee 0%, #ffb800 186.46%);
+}
+
+.banner-container-description p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 620px;
+}
+
+.about-container {
+  min-height: 768px;
+  padding: 40px;
+}
+
+.about-content h1 {
+  font-size: 2rem;
+  margin-top: 80px;
+}
+
+.about-content-divider {
+  margin: 24px 0;
+  position: relative;
+  left: -140px;
+  width: 280px;
+  height: 12px;
+  border-radius: 4px;
+  background: var(--primary-color);
+}
+
+.about-content p {
+  margin-top: 40px;
+  opacity: 0.6;
+  max-width: 560px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.we-do-container {
+  background: var(--back-light-color);
+  min-height: 768px;
+  display: grid;
+  place-items: center;
+}
+
+.we-do-content {
+  padding: 40px;
+}
+
+.we-do-content h1 {
+  color: var(--primary-color);
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.we-do-card-container {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.we-do-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.we-do-card img {
+  height: 80px;
+  margin: 16px auto;
+}
+
+.we-do-card-content {
+  margin: 16px;
+}
+
+.we-do-card-content h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text-dark-color);
+}
+
+.we-do-card-content p {
+  color: var(--text-dark-color);
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  height: 180px;
+  padding: 24px;
+}
+
+.footer-content {
+  padding: 24px;
+}
+
+.footer-content svg {
+  margin: 16px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.footer-content svg path {
+  fill: var(--primary-color);
+}
+
+.footer-content-copyright {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+
+  .we-do-card-container {
+    justify-content: center;
+  }
+
+  .we-do-card {
+    flex-direction: row;
+    max-width: 50%;
+  }
+
+  .we-do-card img {
+    margin: 24px;
+  }
+
+  .we-do-card-content h2 {
+    text-align: left;
+  }
+}
